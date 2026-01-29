@@ -3,34 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mengenal logical fallacy • Catatan Logika Sehari-hari</title>
+  <title>Sesat Pikir  • Logika Elegan Sehari-hari</title>
+  <style>
+    :root {
+      --bg: #fdfdfd;
+      --text: #1e293b;
+      --card: #ffffff;
+      --accent: #14b8a6;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --header: linear-gradient(135deg, #0f172a, #1e293b);
+    }
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --card: #1e293b;
+      --accent: #5eead4;
+      --muted: #94a3b8;
+      --border: #334155;
+      --header: linear-gradient(135deg, #020617, #0f172a);
+    }
+    body {
+      margin:0; padding:0; font-family: system-ui, sans-serif;
+      background: var(--bg); color: var(--text); line-height:1.7; transition: all 0.4s;
+    }
+    header {
+      background: var(--header); color: white; padding: 80px 20px 60px; text-align:center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 { font-size:2.4em; margin:0; font-weight:600; letter-spacing:-1px; }
+    .subtitle { font-size:1.15em; opacity:0.9; margin:12px 0 0; }
+    .toggle { position:fixed; top:20px; right:20px; background:rgba(255,255,255,0.15); border:none; color:white; padding:10px 16px; border-radius:50px; cursor:pointer; font-size:1em; backdrop-filter:blur(10px); z-index:100; }
+    .container { max-width:960px; margin:50px auto; padding:0 20px; }
+    .intro { font-size:1.15em; color:var(--muted); text-align:center; margin:0 0 60px; max-width:800px; margin-left:auto; margin-right:auto; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:40px; box-shadow:0 8px 25px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
+    .card h2 { font-size:1.7em; margin:0 0 16px; color:var(--accent); font-weight:600; display:flex; align-items:center; gap:12px; }
+    .card .subtitle { color:var(--muted); font-size:0.98em; margin-bottom:20px; font-style:italic; }
+    .example { background:rgba(20,184,166,0.08); padding:16px 20px; border-left:4px solid var(--accent); border-radius:8px; margin:20px 0; }
+    footer { background:#0f172a; color:#94a3b8; text-align:center; padding:40px 20px; font-size:0.95em; margin-top:80px; }
+  </style>
 </head>
-<body style="margin:0; padding:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#fdfdfd; color:#2d2d2d; line-height:1.7;">
+<body>
 
-  <!-- Header elegan & minimal -->
-  <div style="background:#1e293b; color:#e2e8f0; padding:50px 20px 40px; text-align:center;">
-    <h1 style="margin:0; font-size:2.1em; font-weight:500; letter-spacing:-0.5px;">Logical Fallacy</h1>
-    <p style="margin:12px 0 0; font-size:1.05em; opacity:0.9;">Panduan sederhana mengenali jebakan logika dalam obrolan sehari-hari</p>
-    <p style="margin:6px 0 0; font-size:0.9em; opacity:0.75;">Dibuat oleh -Iyan • Malausma, 2026</p>
-  </div>
+  <button class="toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-  <!-- Konten utama -->
-  <div style="max-width:860px; margin:40px auto; padding:0 20px;">
+  <header>
+    <h1>Logical Fallacy </h1>
+    <p class="subtitle">Panduan mendalam mengenali jebakan logika — biar argumenmu tajam, bukan cuma nyaring</p>
+    <p style="margin:8px 0 0; font-size:0.9em; opacity:0.8;">Oleh rian ariyudin • Malausma, 2026</p>
+  </header>
 
-    <p style="font-size:1.1em; color:#4b5563; text-align:center; margin:0 0 50px; font-style:italic;">
-      Pernah nggak sih debat sama temen, eh tiba-tiba argumennya melenceng jauh? Itu biasanya karena ada <strong>logical fallacy</strong> alias <strong>sesat pikir</strong>. Bukan berarti orangnya bodoh, tapi otak kita kadang suka jalan pintas yang salah. Yuk kenali beberapa yang paling sering muncul!
+  <div class="container">
+
+    <p class="intro">
+     Pernahkah kamu berdebat dengan seseorang dan merasa argumenmu kuat, tapi entah kenapa lawan bicara tetap tidak terima? Mungkin kamu atau lawan bicaramu terjebak dalam Logical Fallacy!
+Logical Fallacy adalah kesalahan logika dalam penalaran atau argumen yang membuat kesimpulan tidak valid atau tidak meyakinkan. Ini seperti jebakan yang membuat argumen terlihat kuat padahal sebenarnya lemah. Mau tahu contoh Logical Fallacy yang paling umum dan bagaimana menghindarinya?
+</p>
+     
+<p class="intro">
+Di era informasi overload, sesat pikir (logical fallacy) ada di mana-mana: grup WA keluarga, timeline X, debat politik, bahkan obrolan kopi. Ini bukan cuma “salah ngomong”, tapi pola berpikir yang sistematis menyesatkan — baik disengaja maupun tidak. Mengenalinya bikin kamu lebih kritis, nggak gampang termakan hoax atau argumen kosong. Yuk kita bedah 8 yang paling sering muncul, lengkap dengan analogi, contoh nyata, dan cara menghindarinya.
     </p>
 
-    <!-- Card fallacy 1 -->
-    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:28px; margin-bottom:35px; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
-      <h2 style="font-size:1.5em; margin:0 0 12px; color:#1e293b; font-weight:600;">1. Ad Hominem (Serangan Pribadi)</h2>
-      <p style="color:#64748b; font-size:0.95em; margin:0 0 18px;">Menyerang orangnya, bukan argumennya.</p>
-      <p><strong>Contoh sehari-hari:</strong> “Pendapat lo soal ekonomi nggak valid, lo kan cuma lulusan SMA!”</p>
-      <p><strong>Kenapa salah?</strong> Gelar, umur, atau karakter seseorang nggak otomatis bikin argumennya salah. Fokus ke isi, bukan orangnya.</p>
+<p class="intro">penelitian ilmuwan kognitif steven sloman menyatakan bahwa "manusia hanya memahami dasar dari konsep-konsep yang sering kali mereka yakini sepenuhnya." contohnya begini : kita tahu kita bisa menggunakan hand phone, jika ditanya apa saja komponen yang dipakai untuk membuat hand phone? bagaima cara perakitanya? kita tidak berpikir sejauh itu pastinya</p>
+
+    <div class="card">
+      <h2>1. Illusion of knowing</h2>
+      <p class="subtitle">illusion of knowing itu apa yaa🤔?</p>
+      <p>Illusion of knowing adalah bias kognitif di mana seseorang merasa telah memahami atau mengetahui lebih banyak tentang suatu topik daripada yang sebenarnya. Ini terjadi karena manusia cenderung mengandalkan pengetahuan dangkal dan mengabaikan kompleksitas yang lebih dalam, sehingga menciptakan ilusi pemahaman penuh.</p>
+      <div class="example">
+        <strong>Contoh:</strong>Aku sudah belajar nih, -> Pasti aku sudah menjadi banyak tahu.<br>
+      </div>
+      <p><strong>Kenapa berbahaya?</strong>Berbahaya karena kita terjebak dalam pola pikir kita, sehingga membuat kita menjadi sok tahu dan arogan.</p>
+      <p><strong>Cara hindari:</strong>Selalu berpikir luas dan sadar bahwa ilmu pengetahuan itu kompleks.</p>
     </div>
 
-    <!-- Card fallacy 2 -->
-    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:28px; margin-bottom:35px; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
-      <h2 style="font-size:1.5em; margin:0 0 12px; color:#1e293b; font-weight:600;">2. Strawman (Orang-orangan dari Jerami)</h2>
-      <p style="color:#64748b; font-size:0.95em; margin:0 0 18px;">Memutarbalikkan argumen lawan jadi versi lemah, lalu menyerang versi itu.</p>
-      <p><strong>Contoh:</strong> A: “Kita perlu atur ulang pajak supaya lebih adil.” B: “Oh jadi lo mau semua orang miskin dapat duit gratis dari
+    <div class="card">
+      <h2>2. Efek dunning kruger</h2>
+      <p class="subtitle">Efek dunning kruger itu apasih🤔?</p>
+      <p> Efek dunning kruger adalah suatu Fenomena psikologis di mana individu dengan kompetensi rendah dalam satu bidang cenderung melebihkan kemampuan mereka sendiri. Sementara itu, orang yang lebih kompeten justru cenderung meremehkan kemampuannya sendiri.
+
+Ketika kita merasa sudah cukup tahu tentang suatu topik, kita cenderung menutup diri terhadap informasi baru atau argumen yang bertentangan. Sikap ini membuat kita sulit menerima pendapat yang berbeda, dan akhirnya jatuh pada kekeliruan logika.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Aku sudah mempelajari hal itu, dan pasti aku sudah banyak tahu. Padahal baru belajar dasarnya.
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Karena kita bisa saja menjadi arogan, merasa sudah berpengetaguan lebih, dan bisa juga meremehkan oranglain.</p>
+      <p><strong>Cara hindari:</strong> selalu bertanya pada diri sendiri "apakah aku sudah cukup tahu tentang apa yang aku pelajari?”</p>
+    </div>
+
+    <div class="card">
+      <h2>3. Slippery Slope ⛷️</h2>
+      <p class="subtitle">Satu langkah kecil pasti berujung bencana tanpa bukti.</p>
+      <p>Mengklaim A akan memicu rantai kejadian ekstrem sampai Z, tanpa bukti kuat antar langkahnya.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Kalau boleh WFH permanen, nanti orang males kerja, ekonomi ambruk, negara bangkrut!”<br><br>
+        <strong>Di Indo:</strong> “Kalau vaksinasi mandatori, besok-besok pemerintah suntik chip ke otak kita!”
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Membuat orang takut berlebihan terhadap perubahan kecil yang sebenarnya aman.</p>
+      <p><strong>Cara hindari:</strong> Tanya: “Langkah demi langkahnya apa? Ada data yang mendukung rantai ini?”</p>
+    </div>
+
+    <div class="card">
+      <h2>4. False Dilemma / Dikotomi Palsu ⚖️</h2>
+      <p class="subtitle">Hanya ada dua pilihan ekstrem, padahal ada jalan tengah.</p>
+      <p>Menyajikan situasi seolah hanya ada dua opsi hitam-putih.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Kamu dukung timnas atau nggak patriotik sama sekali!”<br><br>
+        Bisa netral, kritis tapi tetap dukung, dll.
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Membatasi pemikiran kreatif dan kompromi.</p>
+      <p><strong>Cara hindari:</strong> Cari opsi ketiga: “Ada nggak posisi di tengah yang masuk akal?”</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Bandwagon / Ad Populum 👥</h2>
+      <p class="subtitle">Benar karena banyak orang melakukannya.</p>
+      <p>Argumen valid karena “semua orang” percaya atau lakukan.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Semua orang pakai aplikasi ini buat investasi, masa lo nggak ikutan? Pasti aman dong!” (Padahal banyak yang rugi besar.)
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Massa bisa salah bareng-bareng (contoh: gelembung saham, tren berbahaya).</p>
+      <p><strong>Cara hindari:</strong> Tanya bukti, bukan popularitas: “Berapa persen yang untung? Ada data independen?”</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Appeal to Authority 👑</h2>
+      <p class="subtitle">Benar karena “pakar” bilang, tanpa cek sendiri.</p>
+      <p>Mengandalkan otoritas (selebriti, influencer) tanpa bukti substansi.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Dokter ini bilang minum air kelapa sembuhkan kanker, pasti bener dong, kan dia dokter!”
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Otoritas pun bisa salah atau bias (sponsor, kurang ahli di bidang itu).</p>
+      <p><strong>Cara hindari:</strong> Cek: Apakah otoritas ini relevan? Ada konsensus ilmiah? Bukti primer apa?</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Red Herring 🐟</h2>
+      <p class="subtitle">Mengalihkan topik ke hal lain yang nggak relevan.</p>
+      <p>Mengganti isu utama dengan distraksi emosional atau topik lain.</p>
+      <div class="example">
+        <strong>Contoh:</strong> Saat ditanya korupsi dana bansos: “Tapi oposisi juga korupsi dulu kok! Kenapa nggak bahas itu?”
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Isu asli nggak terselesaikan, pembicaraan muter-muter.</p>
+      <p><strong>Cara hindari:</strong> Balik ke topik: “Itu penting, tapi sekarang kita bahas kasus ini dulu ya.”</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Hasty Generalization ⚡</h2>
+      <p class="subtitle">Kesimpulan besar dari sampel kecil.</p>
+      <p>Menggeneralisasi dari pengalaman terbatas atau bukti minim.</p>
+      <div class="example">
+        <strong>Contoh:</strong> “Aku ketemu dua orang Jepang sombong, berarti semua orang Jepang sombong!”<br><br>
+        Atau: “Dua temenku rugi main saham, saham itu judi!”
+      </div>
+      <p><strong>Kenapa berbahaya?</strong> Stereotip, prasangka, keputusan buruk berdasarkan data kurang.</p>
+      <p><strong>Cara hindari:</strong> Tanya sampelnya: “Berapa banyak kasus? Ada data statistik?”</p>
+    </div>
+
+    <p style="text-align:center; color:var(--muted); font-size:1.1em; margin:80px 0 40px; font-style:italic;">
+      Kesimpulan: Sesat pikir nggak berarti orang jahat — otak manusia suka shortcut. Tapi kalau kita sadar, kita bisa debat lebih sehat, ambil keputusan lebih bijak, dan nggak gampang dimanipulasi. Mulai sekarang, tiap baca argumen, tanya: “Ini logis, atau cuma kelihatan logis?” Demikian ketika Mempelajari logical fallacy kita bisa melatih daya berpikir lebih jernih, kritis, dan objektif. Ini tidak hanya membantu kita dalam diskusi atau debat, tetapi juga melindungi dari manipulasi, meningkatkan pengambilan keputusan, dan memperkuat komunikasi. Dengan kata lain, kita menjadi lebih cerdas dalam memproses informasi dan berinteraksi dengan dunia.<br><br>
+      
+      Share kalau bermanfaat, atau tambah fallacy favoritmu.
+    </p>
+
+  </div>
+
+  <footer>
+    © 2026 dibuat oleh rian ariyudin 
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+    }
+  </script>
+
+</body>
+</html
