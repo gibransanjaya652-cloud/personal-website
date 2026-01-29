@@ -3,180 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sesat Pikir  • Logika Elegan Sehari-hari</title>
+  <title>Sejarah Kelam Indonesia </title>
+  <meta name="description" content="Penjelasan mendalam tentang 5 peristiwa sejarah kelam Indonesia: latar belakang, korban, kronologi, dampak, dan sumber terpercaya.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fdfdfd;
-      --text: #1e293b;
-      --card: #ffffff;
-      --accent: #14b8a6;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --header: linear-gradient(135deg, #0f172a, #1e293b);
+      --bg: #000000;
+      --text: #e0e0e0;
+      --card-bg: #0f0f0f;
+      --accent: #c53030;
+      --accent-glow: #ff0000;
+      --muted: #a0a0a0;
+      --border: #4a0000;
+      --header: linear-gradient(135deg, #000000 0%, #330000 100%);
+      --shadow: 0 15px 50px rgba(197,48,48,0.4);
+      --glow: 0 0 20px rgba(255,0,0,0.6);
     }
-    [data-theme="dark"] {
-      --bg: #0f172a;
-      --text: #e2e8f0;
-      --card: #1e293b;
-      --accent: #5eead4;
-      --muted: #94a3b8;
-      --border: #334155;
-      --header: linear-gradient(135deg, #020617, #0f172a);
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      margin:0; padding:0; font-family: system-ui, sans-serif;
-      background: var(--bg); color: var(--text); line-height:1.7; transition: all 0.4s;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      transition: all 0.6s ease;
     }
     header {
-      background: var(--header); color: white; padding: 80px 20px 60px; text-align:center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      background: var(--header);
+      color: white;
+      padding: 140px 20px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 -40px 80px rgba(197,48,48,0.3);
     }
-    h1 { font-size:2.4em; margin:0; font-weight:600; letter-spacing:-1px; }
-    .subtitle { font-size:1.15em; opacity:0.9; margin:12px 0 0; }
-    .toggle { position:fixed; top:20px; right:20px; background:rgba(255,255,255,0.15); border:none; color:white; padding:10px 16px; border-radius:50px; cursor:pointer; font-size:1em; backdrop-filter:blur(10px); z-index:100; }
-    .container { max-width:960px; margin:50px auto; padding:0 20px; }
-    .intro { font-size:1.15em; color:var(--muted); text-align:center; margin:0 0 60px; max-width:800px; margin-left:auto; margin-right:auto; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:40px; box-shadow:0 8px 25px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
-    .card h2 { font-size:1.7em; margin:0 0 16px; color:var(--accent); font-weight:600; display:flex; align-items:center; gap:12px; }
-    .card .subtitle { color:var(--muted); font-size:0.98em; margin-bottom:20px; font-style:italic; }
-    .example { background:rgba(20,184,166,0.08); padding:16px 20px; border-left:4px solid var(--accent); border-radius:8px; margin:20px 0; }
-    footer { background:#0f172a; color:#94a3b8; text-align:center; padding:40px 20px; font-size:0.95em; margin-top:80px; }
+    header img.hero {
+      max-width: 100%; height: auto; border-radius: 20px; margin: 40px auto 0;
+      box-shadow: var(--glow), 0 20px 60px rgba(0,0,0,0.8); display: block;
+      filter: brightness(0.7) contrast(1.2);
+    }
+    header::before {
+      content: '';
+      position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(197,48,48,0.25) 0%, transparent 60%);
+      animation: pulse 20s infinite alternate;
+    }
+    @keyframes pulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0.3; } }
+    h1 { font-size: 3.8em; font-weight: 800; margin-bottom: 20px; color: var(--accent-glow); text-shadow: var(--glow); }
+    .subtitle { font-size: 1.4em; opacity: 0.9; max-width: 800px; margin: 0 auto; color: #ffcccc; }
+    .container { max-width: 1100px; margin: 80px auto; padding: 0 30px; }
+    .intro {
+      font-size: 1.25em; color: var(--muted); text-align: center;
+      margin: 0 auto 90px; max-width: 900px;
+    }
+    .quote {
+      background: rgba(197,48,48,0.15); border-left: 8px solid var(--accent);
+      padding: 32px 48px; margin: 50px 0; border-radius: 20px;
+      font-style: italic; color: #ffdddd; font-size: 1.15em; box-shadow: var(--glow);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: 28px; padding: 45px; margin-bottom: 70px;
+      box-shadow: var(--shadow); transition: all 0.6s cubic-bezier(0.34,1.56,0.64,1);
+      position: relative; overflow: hidden; opacity: 0; transform: translateY(40px);
+      animation: fadeIn 1.2s forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
+    .card:nth-child(3) { animation-delay: 0.9s; }
+    .card:nth-child(4) { animation-delay: 1.2s; }
+    .card:nth-child(5) { animation-delay: 1.5s; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    .card:hover {
+      transform: translateY(-20px) scale(1.03);
+      box-shadow: 0 40px 90px rgba(197,48,48,0.6);
+      border-color: var(--accent-glow);
+    }
+    .card img.icon {
+      width: 100%; height: auto; border-radius: 16px; margin-bottom: 25px;
+      box-shadow: var(--glow); filter: brightness(0.7) sepia(0.3);
+    }
+    .card h2 {
+      font-size: 2.2em; margin-bottom: 20px; color: var(--accent);
+      font-weight: 800; text-shadow: 0 2px 10px rgba(255,0,0,0.5);
+    }
+    .card p { margin-bottom: 16px; }
+    .fact { font-weight: 700; color: #ff6666; margin: 20px 0; font-size: 1.1em; }
+    .source { font-size: 0.9em; color: var(--muted); margin-top: 16px; font-style: italic; }
+    footer {
+      background: var(--header); color: #ffcccc;
+      text-align: center; padding: 60px 20px; margin-top: 120px;
+      font-size: 0.95em; border-top: 2px solid var(--accent);
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.8em; }
+      header { padding: 100px 20px 80px; }
+    }
   </style>
 </head>
 <body>
 
-  <button class="toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
-
   <header>
-    <h1>Logical Fallacy </h1>
-    <p class="subtitle">Panduan mendalam mengenali jebakan logika — biar argumenmu tajam, bukan cuma nyaring</p>
-    <p style="margin:8px 0 0; font-size:0.9em; opacity:0.8;">Oleh rian ariyudin • Malausma, 2026</p>
+    <h1>Bercak darah menyeruak</h1>
+    <p class="subtitle">Penjelasan lengkap, rinci, dan berbasis fakta tentang bab-bab gelap masa lalu yang sering ditutup-tutupi. Hitam dan merah – darah di kegelapan sejarah.</p>
+    <img class="hero" src="http://indonesiaatmelbourne.unimelb.edu.au/wp-content/uploads/2017/10/1965-massacre-indonesia-photo-1492544394.jpg" alt="Foto tahanan selama pembantaian 1965 – simbol kegelapan nasional">
   </header>
 
   <div class="container">
 
     <p class="intro">
-     Pernahkah kamu berdebat dengan seseorang dan merasa argumenmu kuat, tapi entah kenapa lawan bicara tetap tidak terima? Mungkin kamu atau lawan bicaramu terjebak dalam Logical Fallacy!
-Logical Fallacy adalah kesalahan logika dalam penalaran atau argumen yang membuat kesimpulan tidak valid atau tidak meyakinkan. Ini seperti jebakan yang membuat argumen terlihat kuat padahal sebenarnya lemah. Mau tahu contoh Logical Fallacy yang paling umum dan bagaimana menghindarinya?
-</p>
-     
-<p class="intro">
-Di era informasi overload, sesat pikir (logical fallacy) ada di mana-mana: grup WA keluarga, timeline X, debat politik, bahkan obrolan kopi. Ini bukan cuma “salah ngomong”, tapi pola berpikir yang sistematis menyesatkan — baik disengaja maupun tidak. Mengenalinya bikin kamu lebih kritis, nggak gampang termakan hoax atau argumen kosong. Yuk kita bedah 8 yang paling sering muncul, lengkap dengan analogi, contoh nyata, dan cara menghindarinya.
+      Indonesia punya sejarah panjang perjuangan dan kemerdekaan, tapi juga periode kelam yang penuh kekerasan, pembantaian, dan trauma kolektif. Berikut 5 peristiwa paling signifikan, dijelaskan secara mendalam dengan latar belakang, kronologi, estimasi korban, dampak, dan sumber terpercaya. Semua fakta diambil dari studi historis, arsip resmi, dan penelitian akademik untuk memastikan keakuratan – bukan cerita karangan.
     </p>
 
-<p class="intro">penelitian ilmuwan kognitif steven sloman menyatakan bahwa "manusia hanya memahami dasar dari konsep-konsep yang sering kali mereka yakini sepenuhnya." contohnya begini : kita tahu kita bisa menggunakan hand phone, jika ditanya apa saja komponen yang dipakai untuk membuat hand phone? bagaima cara perakitanya? kita tidak berpikir sejauh itu pastinya</p>
-
-    <div class="card">
-      <h2>1. Illusion of knowing</h2>
-      <p class="subtitle">illusion of knowing itu apa yaa🤔?</p>
-      <p>Illusion of knowing adalah bias kognitif di mana seseorang merasa telah memahami atau mengetahui lebih banyak tentang suatu topik daripada yang sebenarnya. Ini terjadi karena manusia cenderung mengandalkan pengetahuan dangkal dan mengabaikan kompleksitas yang lebih dalam, sehingga menciptakan ilusi pemahaman penuh.</p>
-      <div class="example">
-        <strong>Contoh:</strong>Aku sudah belajar nih, -> Pasti aku sudah menjadi banyak tahu.<br>
-      </div>
-      <p><strong>Kenapa berbahaya?</strong>Berbahaya karena kita terjebak dalam pola pikir kita, sehingga membuat kita menjadi sok tahu dan arogan.</p>
-      <p><strong>Cara hindari:</strong>Selalu berpikir luas dan sadar bahwa ilmu pengetahuan itu kompleks.</p>
+    <div class="quote">
+      “Sejarah yang kelam bukan untuk disembunyikan, tapi untuk diungkap agar bangsa bisa belajar dan maju.” — Adaptasi dari prinsip historiografi modern
     </div>
 
     <div class="card">
-      <h2>2. Efek dunning kruger</h2>
-      <p class="subtitle">Efek dunning kruger itu apasih🤔?</p>
-      <p> Efek dunning kruger adalah suatu Fenomena psikologis di mana individu dengan kompetensi rendah dalam satu bidang cenderung melebihkan kemampuan mereka sendiri. Sementara itu, orang yang lebih kompeten justru cenderung meremehkan kemampuannya sendiri.
-
-Ketika kita merasa sudah cukup tahu tentang suatu topik, kita cenderung menutup diri terhadap informasi baru atau argumen yang bertentangan. Sikap ini membuat kita sulit menerima pendapat yang berbeda, dan akhirnya jatuh pada kekeliruan logika.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Aku sudah mempelajari hal itu, dan pasti aku sudah banyak tahu. Padahal baru belajar dasarnya.
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Karena kita bisa saja menjadi arogan, merasa sudah berpengetaguan lebih, dan bisa juga meremehkan oranglain.</p>
-      <p><strong>Cara hindari:</strong> selalu bertanya pada diri sendiri "apakah aku sudah cukup tahu tentang apa yang aku pelajari?”</p>
+      <img class="icon" src="https://images.theconversation.com/files/447444/original/file-20220221-18-1wd81h2.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=754&fit=clip" alt="Tentara Belanda dengan tahanan Indonesia selama Revolusi Kemerdekaan">
+      <h2>1. Kekerasan Sistematis Belanda & Unit Pembunuh (1945–1949)</h2>
+      <p>Latar belakang: Setelah Jepang menyerah pada 1945, Belanda berusaha merebut kembali koloni Hindia Belanda. Mereka meluncurkan operasi militer besar-besaran, termasuk pembentukan unit khusus (seperti Speciale Troepen atau regu pembunuh) untuk melakukan operasi kontra-gerilya brutal terhadap pejuang dan warga sipil Indonesia.</p>
+      <p>Kronologi: Kekerasan mencapai puncak selama "Agresi Militer I" (1947) dan "Agresi Militer II" (1948). Contoh terkenal: Pembantaian Rawagede (9 Desember 1947) di mana 431 pria desa dibunuh karena diduga menyembunyikan pejuang. Belanda menggunakan penyiksaan, eksekusi tanpa pengadilan, pembakaran desa, dan pemindahan paksa penduduk. Banyak kasus melibatkan pemerkosaan dan penghilangan paksa.</p>
+      <div class="fact">Estimasi korban: Belanda membunuh dan menyalahgunakan ribuan warga sipil non-kombatan. Total korban Indonesia sekitar 100.000–150.000 tewas selama perang (termasuk kekerasan Belanda). Belanda sendiri mengakui kekerasan sistematis setelah penyelidikan 2022 oleh NIOD dan KITLV.</div>
+      <p>Dampak jangka panjang: Trauma kolektif di masyarakat Indonesia, tuntutan maaf resmi Belanda (2013 untuk Rawagede, 2022 untuk kekerasan sistematis), dan kompensasi terbatas. Ini jadi contoh bagaimana kekuasaan kolonial menggunakan kekerasan ekstrem untuk mempertahankan dominasi.</p>
+      <p class="source">Sumber: Wikipedia Rawagede Massacre; NIOD Indonesia War of Independence; BBC News (2013); Empire's Violent End (Project MUSE).</p>
     </div>
 
     <div class="card">
-      <h2>3. Slippery Slope ⛷️</h2>
-      <p class="subtitle">Satu langkah kecil pasti berujung bencana tanpa bukti.</p>
-      <p>Mengklaim A akan memicu rantai kejadian ekstrem sampai Z, tanpa bukti kuat antar langkahnya.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Kalau boleh WFH permanen, nanti orang males kerja, ekonomi ambruk, negara bangkrut!”<br><br>
-        <strong>Di Indo:</strong> “Kalau vaksinasi mandatori, besok-besok pemerintah suntik chip ke otak kita!”
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Membuat orang takut berlebihan terhadap perubahan kecil yang sebenarnya aman.</p>
-      <p><strong>Cara hindari:</strong> Tanya: “Langkah demi langkahnya apa? Ada data yang mendukung rantai ini?”</p>
+      <img class="icon" src="http://indonesiaatmelbourne.unimelb.edu.au/wp-content/uploads/2017/10/1965-massacre-indonesia-photo-1492544394.jpg" alt="Foto tahanan dan kekerasan selama 1965-1966">
+      <h2>2. Pembantaian Massal Anti-Komunis 1965–1966</h2>
+      <p>Latar belakang: Setelah peristiwa G30S/PKI (30 September 1965) di mana 6 jenderal dibunuh, militer di bawah Soeharto menyalahkan PKI (Partai Komunis Indonesia). Ini jadi alasan untuk pembersihan massal terhadap anggota PKI, simpatisan, dan kelompok marjinal lainnya.</p>
+      <p>Kronologi: Mulai Oktober 1965, militer (termasuk RPKAD), milisi sipil, dan massa melakukan pembunuhan sistematis di Jawa, Bali, Sumatera, dan Sulawesi. Metode: Pemenggalan kepala, penyiksaan, pemerkosaan, dan pembuangan mayat ke sungai. Puncak kekerasan di Jawa Tengah dan Bali (akhir 1965–awal 1966). AS dan Barat memberikan dukungan diam-diam melalui daftar nama komunis.</p>
+      <div class="fact">Estimasi korban: 500.000–1 juta tewas (beberapa sumber hingga 3 juta jika termasuk korban tidak langsung). Jutaan ditahan tanpa pengadilan di kamp-kamp (sampai 1970-an). Ini salah satu pembunuhan massal terbesar abad 20, dibandingkan genosida Rwanda atau Kamboja.</div>
+      <p>Dampak jangka panjang: Rezim Orde Baru mempropagandakan PKI sebagai musuh abadi (film Pengkhianatan G30S/PKI). Sampai sekarang, keluarga korban masih didiskriminasi, dan rekonsiliasi belum tuntas. Dokumen AS dirilis 2017 mengonfirmasi keterlibatan Barat.</p>
+      <p class="source">Sumber: Wikipedia Indonesian Mass Killings; Sciences Po Mass Violence; US National Security Archive (2017); Amnesty International (2015).</p>
     </div>
 
     <div class="card">
-      <h2>4. False Dilemma / Dikotomi Palsu ⚖️</h2>
-      <p class="subtitle">Hanya ada dua pilihan ekstrem, padahal ada jalan tengah.</p>
-      <p>Menyajikan situasi seolah hanya ada dua opsi hitam-putih.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Kamu dukung timnas atau nggak patriotik sama sekali!”<br><br>
-        Bisa netral, kritis tapi tetap dukung, dll.
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Membatasi pemikiran kreatif dan kompromi.</p>
-      <p><strong>Cara hindari:</strong> Cari opsi ketiga: “Ada nggak posisi di tengah yang masuk akal?”</p>
+      <img class="icon" src="https://imperialglobalexeter.com/wp-content/uploads/2016/12/tm-h-796.jpg" alt="Lukisan kekerasan kolonial Belanda di Indonesia">
+      <h2>3. Masa Bersiap (Oktober 1945 – Maret 1946)</h2>
+      <p>Latar belakang: Pasca-penyerahan Jepang, kekosongan kekuasaan di Jawa dan Sumatera menyebabkan chaos. Pemuda Indonesia "bersiap" merebut senjata dan kekuasaan, tapi berujung kekerasan massal terhadap kelompok etnis yang dianggap kolaborator Belanda.</p>
+      <p>Kronologi: Kekerasan dimulai Oktober 1945, melibatkan pemuda, laskar, dan massa terhadap orang Belanda, Indo-Eropa, Tionghoa, dan Moluccan. Metode: Pembunuhan, pemerkosaan, pemotongan kepala, dan pembakaran rumah. Puncak di Surabaya, Semarang, dan Jakarta. Inggris (yang menduduki sementara) ikut terlibat dalam konflik.</p>
+      <div class="fact">Estimasi korban: 3.500–30.000 tewas (mayoritas etnis Eropa dan Indo). Banyak korban sipil, termasuk wanita dan anak-anak. Kekerasan ini jadi salah satu episode etnis cleansing pertama pasca-PD II.</div>
+      <p>Dampak jangka panjang: Trauma bagi komunitas Indo dan Eropa yang meninggalkan Indonesia. Di Belanda, "Bersiap" digunakan untuk membenarkan intervensi militer. Di Indonesia, jarang dibahas karena sensitif terhadap narasi kemerdekaan.</p>
+      <p class="source">Sumber: Wikipedia Bersiap; NIOD Indonesia War of Independence; The Indo Project; Resonance of Violence (Amsterdam University Press).</p>
     </div>
 
     <div class="card">
-      <h2>5. Bandwagon / Ad Populum 👥</h2>
-      <p class="subtitle">Benar karena banyak orang melakukannya.</p>
-      <p>Argumen valid karena “semua orang” percaya atau lakukan.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Semua orang pakai aplikasi ini buat investasi, masa lo nggak ikutan? Pasti aman dong!” (Padahal banyak yang rugi besar.)
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Massa bisa salah bareng-bareng (contoh: gelembung saham, tren berbahaya).</p>
-      <p><strong>Cara hindari:</strong> Tanya bukti, bukan popularitas: “Berapa persen yang untung? Ada data independen?”</p>
+      <img class="icon" src="https://archaeologymag.com/wp-content/uploads/worlds-oldest-narrative-art-1.jpg" alt="Lukisan gua prasejarah – simbol sejarah panjang tapi kelam Indonesia">
+      <h2>4. Tragedi Madiun 1948</h2>
+      <p>Latar belakang: Konflik ideologi pasca-kemerdekaan. PKI (dipimpin Musso dari Uni Soviet) merasa pemerintah Republik terlalu kompromis dengan Belanda. Mereka mendirikan "Soviet Republik Indonesia" di Madiun pada 18 September 1948.</p>
+      <p>Kronologi: Pemberontakan dimulai dengan pengambilalihan kantor pemerintah di Madiun. Pemerintah Soekarno-Hatta mengirim TNI (dipimpin Soeharto) untuk menumpasnya. Perang saudara singkat berlangsung 2–3 minggu. Musso tewas, ribuan anggota PKI dieksekusi atau ditangkap.</p>
+      <div class="fact">Estimasi korban: 8.000–36.000 tewas (mayoritas dari pihak pemberontak dan sipil). Ini konflik internal pertama Republik, akar diskriminasi terhadap kiri di masa Orde Baru.</div>
+      <p>Dampak jangka panjang: PKI dilemahkan, narasi "pemberontakan komunis" jadi propaganda anti-kiri. Menjadi preseden untuk pembantaian 1965.</p>
+      <p class="source">Sumber: Britannica Madiun Affair; Cornell University eCommons; Rozenberg Quarterly.</p>
     </div>
 
     <div class="card">
-      <h2>6. Appeal to Authority 👑</h2>
-      <p class="subtitle">Benar karena “pakar” bilang, tanpa cek sendiri.</p>
-      <p>Mengandalkan otoritas (selebriti, influencer) tanpa bukti substansi.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Dokter ini bilang minum air kelapa sembuhkan kanker, pasti bener dong, kan dia dokter!”
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Otoritas pun bisa salah atau bias (sponsor, kurang ahli di bidang itu).</p>
-      <p><strong>Cara hindari:</strong> Cek: Apakah otoritas ini relevan? Ada konsensus ilmiah? Bukti primer apa?</p>
+      <img class="icon" src="https://images.wondershare.com/edrawmax/articles2025/independence-of-mexico/independence-of-mexico.jpg" alt="Timeline perjuangan – analogi dengan tragedi Krakatau">
+      <h2>5. Erupsi Krakatau 1883</h2>
+      <p>Latar belakang: Gunung Krakatau di Selat Sunda meletus secara eksplosif pada 26–27 Agustus 1883 – salah satu erupsi terbesar dalam sejarah modern.</p>
+      <p>Kronologi: Mulai aktivitas kecil April 1883, puncak 27 Agustus dengan ledakan setara 200 megaton bom. Gelombang tsunami setinggi 40m menghantam pantai Jawa dan Sumatera. Abu vulkanik mencapai stratosfer, langit gelap berbulan-bulan, suara ledakan terdengar hingga 4.800 km jauhnya.</p>
+      <div class="fact">Korban: 36.417 tewas (mayoritas karena tsunami, bukan lava). 165 desa pesisir hancur. Dampak global: Suhu dunia turun 0.6°C, matahari terbenam merah karena debu atmosfer.</div>
+      <p>Dampak jangka panjang: Ubah pola cuaca global, inspirasi cerita hantu lokal (suara ledakan seperti "ketukan dari alam"), dan studi vulkanologi modern. Ini bencana alam yang bikin manusia sadar kerentanan terhadap kekuatan bumi.</p>
+      <p class="source">Sumber: Wikipedia 1883 Eruption of Krakatoa; NOAA NCEI; Natural History Museum UK; Britannica Krakatoa.</p>
     </div>
 
-    <div class="card">
-      <h2>7. Red Herring 🐟</h2>
-      <p class="subtitle">Mengalihkan topik ke hal lain yang nggak relevan.</p>
-      <p>Mengganti isu utama dengan distraksi emosional atau topik lain.</p>
-      <div class="example">
-        <strong>Contoh:</strong> Saat ditanya korupsi dana bansos: “Tapi oposisi juga korupsi dulu kok! Kenapa nggak bahas itu?”
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Isu asli nggak terselesaikan, pembicaraan muter-muter.</p>
-      <p><strong>Cara hindari:</strong> Balik ke topik: “Itu penting, tapi sekarang kita bahas kasus ini dulu ya.”</p>
-    </div>
-
-    <div class="card">
-      <h2>8. Hasty Generalization ⚡</h2>
-      <p class="subtitle">Kesimpulan besar dari sampel kecil.</p>
-      <p>Menggeneralisasi dari pengalaman terbatas atau bukti minim.</p>
-      <div class="example">
-        <strong>Contoh:</strong> “Aku ketemu dua orang Jepang sombong, berarti semua orang Jepang sombong!”<br><br>
-        Atau: “Dua temenku rugi main saham, saham itu judi!”
-      </div>
-      <p><strong>Kenapa berbahaya?</strong> Stereotip, prasangka, keputusan buruk berdasarkan data kurang.</p>
-      <p><strong>Cara hindari:</strong> Tanya sampelnya: “Berapa banyak kasus? Ada data statistik?”</p>
-    </div>
-
-    <p style="text-align:center; color:var(--muted); font-size:1.1em; margin:80px 0 40px; font-style:italic;">
-      Kesimpulan: Sesat pikir nggak berarti orang jahat — otak manusia suka shortcut. Tapi kalau kita sadar, kita bisa debat lebih sehat, ambil keputusan lebih bijak, dan nggak gampang dimanipulasi. Mulai sekarang, tiap baca argumen, tanya: “Ini logis, atau cuma kelihatan logis?” Demikian ketika Mempelajari logical fallacy kita bisa melatih daya berpikir lebih jernih, kritis, dan objektif. Ini tidak hanya membantu kita dalam diskusi atau debat, tetapi juga melindungi dari manipulasi, meningkatkan pengambilan keputusan, dan memperkuat komunikasi. Dengan kata lain, kita menjadi lebih cerdas dalam memproses informasi dan berinteraksi dengan dunia.<br><br>
-      
-      Share kalau bermanfaat, atau tambah fallacy favoritmu.
+    <p style="text-align:center; font-size:1.3em; color:var(--muted); margin:120px 0 80px;">
+      Penjelasan di atas berdasarkan fakta historis dari sumber kredibel – bukan opini atau cerita bohongan. Sejarah kelam ini penting untuk dipahami secara utuh agar kita bisa membangun masa depan yang lebih ideal.<br><br>
+      Tetap ingat sejarah, tetap waspada terhadap kekerasan. 🩸
     </p>
 
   </div>
 
   <footer>
-    © 2026 dibuat oleh rian ariyudin 
+    © 2026 -Iyan • majalengja • Dibuat dengan penelitian mendalam, kopi hitam, dan rasa hormat pada korban masa lalu.<br>
+    
   </footer>
 
-  <script>
-    function toggleTheme() {
-      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
-    }
-  </script>
-
 </body>
-</html
+</html>
